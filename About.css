@@ -1,0 +1,959 @@
+/* ======================
+   GLOBAL
+====================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f9f5ff;
+    overflow-x:hidden;
+    padding-top:130px;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* ======================
+   HEADER
+====================== */
+
+.site-header{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:999;
+    background:#fff;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+/* Top Bar */
+
+.top-bar{
+    background:linear-gradient(
+        to right,
+        #ede9fe,
+        #dcfce7
+    );
+}
+
+.top-bar .container{
+    display:flex;
+    justify-content:flex-end;
+    gap:30px;
+    padding:10px 0;
+}
+
+.top-bar a{
+    color:#555;
+    text-decoration:none;
+}
+
+/* Navbar */
+
+.navbar{
+    padding:15px 0;
+}
+
+.nav-wrapper{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    text-decoration:none;
+}
+
+.logo img{
+    height:55px;
+}
+
+.logo span{
+    font-size:24px;
+    font-weight:700;
+    color:#7c3aed;
+}
+
+/* Desktop Menu */
+
+.desktop-menu{
+    display:flex;
+    gap:30px;
+}
+
+.desktop-menu a{
+    text-decoration:none;
+    color:#444;
+    font-weight:500;
+}
+
+.desktop-menu a:hover{
+    color:#7c3aed;
+}
+
+/* Mobile Button */
+
+.mobile-menu-btn{
+    display:none;
+}
+
+/* =========================================
+   ABOUT SECTION STARTS HERE
+========================================= */
+
+.about-section {
+    padding: 80px 20px;
+}
+
+.about-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.7fr;
+    gap: 50px;
+    align-items: start;
+}
+
+/* =========================================
+   ABOUT CARD
+========================================= */
+
+.about-card {
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.about-card h1 {
+    font-size: 32px;
+    color: #6b46c1;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-card h2 {
+    font-size: 26px;
+    color: #6b46c1;
+    text-align: center;
+    margin: 30px 0 15px;
+}
+
+.designation {
+    text-align: center;
+    font-weight: 600;
+    color: #6b46c1;
+    margin-bottom: 20px;
+}
+
+.about-card p {
+    color: #333333;
+    line-height: 1.8;
+    text-align: center;
+}
+
+/* =========================================
+   BADGES
+========================================= */
+
+.badges {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.badges span {
+    background: #ede9fe;
+    color: #6b46c1;
+    padding: 10px 15px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.about-content {
+    color: #333333;
+}
+
+.section-title {
+    font-size: 34px;
+    color: #6b46c1;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* =========================================
+   SERVICES GRID
+========================================= */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.service-card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.service-card span {
+    font-size: 36px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.service-card h4 {
+    color: #6b46c1;
+    font-size: 18px;
+    margin: 0;
+}
+
+/* =========================================
+   WHY CHOOSE ME
+========================================= */
+
+.why-choose {
+    max-width: 1200px;
+    margin: 80px auto 0;
+}
+
+.why-choose h2 {
+    text-align: center;
+    font-size: 36px;
+    color: #6b46c1;
+    margin-bottom: 30px;
+}
+
+.why-content {
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.why-content p {
+    color: #333333;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.cta-wrapper {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.cta-btn {
+    display: inline-block;
+    background: #6b46c1;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 14px 30px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.cta-btn:hover {
+    background: #553c9a;
+}
+
+/* ===================================
+   FOOTER STARTS HERE
+=================================== */
+
+.site-footer{
+
+    background:linear-gradient(
+        180deg,
+        #9b86cd 0%,
+        #9579d7 100%
+    );
+
+    color:#fff;
+
+    padding:30px 20px 10px;
+
+    margin-top:70px;
+
+    overflow:hidden;
+}
+
+/* Container */
+
+.site-footer .container{
+
+    max-width:1350px;
+
+    margin:auto;
+}
+
+/* ===========================
+        GRID
+=========================== */
+
+.footer-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        1.4fr
+        1fr
+        1.2fr
+        1.25fr;
+
+    gap:15px;
+
+    margin-bottom:10px;
+}
+
+/* ===========================
+        BRAND
+=========================== */
+
+.footer-brand img{
+
+    width:82px;
+
+    height:82px;
+
+    object-fit:cover;
+
+    border-radius:14px;
+
+    background:#fff;
+
+    padding:5px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.18);
+
+    margin-bottom:15px;
+}
+
+.footer-brand h3{
+
+    font-size:1.8rem;
+
+    font-weight:700;
+
+    line-height:1.35;
+
+    margin-bottom:18px;
+}
+
+.footer-brand p{
+
+    margin-bottom:12px;
+
+    color:rgba(255,255,255,.95);
+
+    font-size:1.05rem;
+}
+
+/* ===========================
+        HEADINGS
+=========================== */
+
+.footer-links h4,
+.footer-contact h4{
+
+    font-size:1.35rem;
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+    color:#ffffff;
+}
+
+/* Remove underline */
+
+.footer-links h4::after,
+.footer-contact h4::after{
+
+    display:none;
+}
+
+/* ===========================
+        LINKS
+=========================== */
+
+.footer-links ul{
+
+    list-style:none;
+
+    margin:0;
+
+    padding:0;
+}
+
+.footer-links li{
+
+    margin-bottom:14px;
+}
+
+.footer-links a{
+
+    color:#fff;
+
+    text-decoration:none;
+
+    transition:.3s;
+}
+
+.footer-links a:hover{
+
+    color:#AEC880;
+
+    padding-left:6px;
+}
+
+/* ===========================
+        CONTACT
+=========================== */
+
+.footer-contact p{
+
+    margin-bottom:16px;
+
+    line-height:1.7;
+}
+
+.footer-contact strong{
+
+    color:#ffffff;
+}
+
+.footer-contact a{
+
+    color:#fff;
+
+    text-decoration:none;
+}
+
+.footer-contact a:hover{
+
+    color:#AEC880;
+}
+
+/* ===========================
+        HOURS
+=========================== */
+
+.footer-hours{
+
+    margin-top:18px;
+
+    background:rgba(255,255,255,.10);
+
+    padding:14px;
+
+    border-radius:12px;
+}
+
+.footer-hours strong{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    color:#AEC880;
+}
+
+.footer-hours p{
+
+    margin:4px 0;
+
+    font-size:.96rem;
+}
+
+/* ===========================
+        SOCIAL
+=========================== */
+
+.social-links{
+
+    margin-top:22px;
+}
+
+.social-links a{
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(255,255,255,.15);
+
+    color:#fff;
+
+    font-size:1.2rem;
+
+    text-decoration:none;
+
+    transition:.35s;
+}
+
+.social-links a:hover{
+
+    background:#AEC880;
+
+    color:#fff;
+
+    transform:translateY(-4px);
+}
+
+/* ===========================
+        FOOTER BOTTOM
+=========================== */
+
+.footer-bottom{
+
+    border-top:1px solid rgba(255,255,255,.15);
+
+    padding-top:18px;
+
+    text-align:center;
+}
+
+.footer-bottom p{
+
+    margin:6px 0;
+
+    color:#fff;
+
+    font-size:1rem;
+}
+
+.footer-bottom a{
+
+    color:#AEC880;
+
+    text-decoration:none;
+
+    font-weight:600;
+}
+
+.footer-bottom a:hover{
+
+    color:#ffffff;
+}
+
+/* ====================================
+   MOBILE RESPONSIVE STYLES STARTS HERE
+==================================== */
+
+/* ====================================
+   GLOBAL RESET FOR MOBILE DEVICES
+==================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    overflow-x:hidden;
+}
+
+body{
+    overflow-x:hidden;
+    font-family:'Poppins',sans-serif;
+}
+
+img,
+video,
+iframe{
+    max-width:100%;
+    display:block;
+}
+
+/* ====================================
+   MOBILE HEADER
+==================================== */
+
+@media (max-width:768px){
+
+    .top-bar .container{
+        justify-content:center;
+        flex-direction:column;
+        align-items:center;
+        gap:6px;
+        text-align:center;
+        padding:8px 15px;
+    }
+
+    .top-bar a{
+        font-size:13px;
+    }
+
+    .nav-wrapper{
+        padding:12px 15px;
+    }
+
+    .logo{
+        max-width:80%;
+    }
+
+    .logo img{
+        height:42px;
+    }
+
+    .logo span{
+        font-size:0.95rem;
+        line-height:1.3;
+    }
+
+    .desktop-menu{
+        display:none;
+    }
+
+    .mobile-menu-btn{
+        display:block;
+        background:none;
+        border:none;
+        font-size:1.7rem;
+        color:#7e22ce;
+        cursor:pointer;
+    }
+
+    .mobile-menu{
+        display:none;
+        flex-direction:column;
+        background:#ffffff;
+        border-top:1px solid #e5e5e5;
+    }
+
+    .mobile-menu.active{
+        display:flex;
+    }
+
+    .mobile-menu a{
+        padding:15px;
+        text-decoration:none;
+        color:#333;
+        border-bottom:1px solid #f0f0f0;
+        text-align:center;
+        font-weight:500;
+    }
+
+    .mobile-menu a:hover{
+        background:#f9f5ff;
+        color:#7e22ce;
+    }
+
+}
+
+/* Desktop defaults */
+
+.mobile-menu{
+    display:none;
+}
+
+.mobile-menu-btn{
+    display:none;
+}
+
+/* Mobile */
+
+@media (max-width:768px){
+
+    .desktop-menu{
+        display:none;
+    }
+
+    .mobile-menu-btn{
+        display:block;
+    }
+
+    .mobile-menu.active{
+        display:flex;
+        flex-direction:column;
+    }
+
+}
+
+/* ==========================
+    ABOUT SECTION MOBILE
+    ========================== */
+
+@media (max-width:768px){
+
+    .about-section{
+        padding:60px 15px;
+    }
+
+    /* MAIN LAYOUT STACK */
+    .about-section .container{
+        grid-template-columns:1fr;
+        gap:30px;
+    }
+
+    /* ABOUT CARD */
+    .about-card{
+        padding:25px 18px;
+    }
+
+    .about-card h1{
+        font-size:24px;
+    }
+
+    .about-card h2{
+        font-size:20px;
+    }
+
+    .about-card p{
+        font-size:0.9rem;
+        line-height:1.6;
+    }
+
+    /* SECTION TITLE */
+    .section-title{
+        font-size:24px;
+        text-align:center;
+    }
+
+    /* BADGES */
+    .badges{
+        gap:8px;
+    }
+
+    .badges span{
+        font-size:12px;
+        padding:8px 12px;
+    }
+
+    /* ==========================
+    SERVICES GRID MOBILE
+    ========================== */
+
+    .services-grid{
+        grid-template-columns:1fr;
+        gap:15px;
+    }
+
+    .service-card{
+        padding:20px;
+    }
+
+    .service-card span{
+        font-size:28px;
+    }
+
+    .service-card h4{
+        font-size:16px;
+    }
+}
+
+/* ==========================
+    WHY CHOOSE ME MOBILE
+    ========================== */
+@media (max-width:768px){
+
+    .why-choose{
+        margin:50px 15px 0;
+    }
+
+    .why-choose h2{
+        font-size:24px;
+        margin-bottom:20px;
+        line-height:1.3;
+    }
+
+    .why-content{
+        padding:22px 18px;
+        border-radius:16px;
+    }
+
+    .why-content p{
+        font-size:0.9rem;
+        line-height:1.6;
+        margin-bottom:15px;
+    }
+
+    .cta-wrapper{
+        margin-top:20px;
+    }
+
+    .cta-btn{
+        padding:12px 22px;
+        font-size:0.9rem;
+        border-radius:8px;
+    }
+}
+
+/* ====================================
+   FOOTER - MOBILE
+==================================== */
+
+@media (max-width:768px){
+
+    .site-footer{
+        padding:40px 15px 15px;
+        margin-top:50px;
+        text-align:center;
+    }
+
+    /* Footer Grid */
+
+    .footer-grid{
+        grid-template-columns:1fr;
+        gap:35px;
+        margin-bottom:25px;
+        text-align:center;
+    }
+
+    /* ==========================
+       BRAND SECTION
+    ========================== */
+
+    /* Brand */
+
+.footer-brand{
+    text-align:center;
+}
+
+.footer-brand-top{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:15px;
+    margin-bottom:15px;
+}
+
+.footer-brand-top img{
+    width:65px;
+    height:65px;
+    flex-shrink:0;
+}
+
+.footer-brand-top h3{
+    font-size:1.35rem;
+    line-height:1.3;
+    margin:0;
+    text-align:left;
+}
+
+.footer-brand p{
+    font-size:0.95rem;
+    line-height:1.7;
+}
+
+    /* ==========================
+       HEADINGS
+    ========================== */
+
+    .footer-links,
+    .footer-contact{
+        text-align:center;
+    }
+
+    .footer-links h4,
+    .footer-contact h4{
+        font-size:1.2rem;
+        margin-bottom:15px;
+    }
+
+    /* ==========================
+       LINKS
+    ========================== */
+
+    .footer-links ul{
+        padding:0;
+        margin:0;
+    }
+
+    .footer-links li{
+        margin-bottom:10px;
+    }
+
+    .footer-links a{
+        font-size:0.95rem;
+    }
+
+    /* ==========================
+       CONTACT
+    ========================== */
+
+    .footer-contact p{
+        font-size:0.95rem;
+        line-height:1.7;
+    }
+
+    /* ==========================
+       HOURS
+    ========================== */
+
+    .footer-hours{
+        margin-top:15px;
+        padding:12px;
+    }
+
+    .footer-hours p{
+        font-size:0.9rem;
+    }
+
+    /* ==========================
+       SOCIAL
+    ========================== */
+
+    .social-links{
+        display:flex;
+        justify-content:center;
+        gap:12px;
+        margin-top:18px;
+    }
+
+    .social-links a{
+        width:42px;
+        height:42px;
+        font-size:1.1rem;
+    }
+
+    /* ==========================
+       FOOTER BOTTOM
+    ========================== */
+
+    .footer-bottom{
+        padding-top:15px;
+    }
+
+    .footer-bottom p{
+        font-size:0.9rem;
+        line-height:1.6;
+        margin:8px 0;
+    }
+    
+}

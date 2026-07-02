@@ -1,0 +1,1715 @@
+/* ======================
+   GLOBAL
+====================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f9f5ff;
+    overflow-x:hidden;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* ======================
+   HEADER
+====================== */
+
+.site-header{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:999;
+    background:#fff;
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+/* Top Bar */
+
+.top-bar{
+    background:linear-gradient(
+        to right,
+        #ede9fe,
+        #dcfce7
+    );
+}
+
+.top-bar .container{
+    display:flex;
+    justify-content:flex-end;
+    gap:30px;
+    padding:10px 0;
+}
+
+.top-bar a{
+    color:#555;
+    text-decoration:none;
+}
+
+/* Navbar */
+
+.navbar{
+    padding:15px 0;
+}
+
+.nav-wrapper{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    text-decoration:none;
+}
+
+.logo img{
+    height:55px;
+}
+
+.logo span{
+    font-size:24px;
+    font-weight:700;
+    color:#7c3aed;
+}
+
+/* Desktop Menu */
+
+.desktop-menu{
+    display:flex;
+    gap:30px;
+}
+
+.desktop-menu a{
+    text-decoration:none;
+    color:#444;
+    font-weight:500;
+}
+
+.desktop-menu a:hover{
+    color:#7c3aed;
+}
+
+/* Mobile Button */
+
+.mobile-menu-btn{
+    display:none;
+}
+
+/* ======================
+   HERO VIDEO
+====================== */
+
+.hero{
+    position:relative;
+    height:100vh;
+    overflow:hidden;
+}
+
+.hero video{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.hero-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.30);
+}
+
+/* ======================
+   CONTACT CARDS
+====================== */
+
+.contact-cards{
+    position:relative;
+    margin-top:-60px;
+    z-index:20;
+}
+
+.cards-wrapper{
+
+    max-width:850px;
+    margin:auto;
+
+    display:flex;
+    gap:25px;
+
+    /* Soft Premium Gradient */
+    background:linear-gradient(
+        135deg,
+        rgba(237,233,254,.95) 0%,
+        rgba(255,255,255,.98) 50%,
+        rgba(220,252,231,.95) 100%
+    );
+
+    padding:25px;
+
+    border-radius:20px;
+
+    box-shadow:
+        0 8px 25px rgba(168,85,247,.08),
+        0 12px 35px rgba(34,197,94,.08),
+        0 5px 18px rgba(0,0,0,.06);
+
+    backdrop-filter:blur(12px);
+}
+
+.contact-card{
+
+    flex:1;
+
+    background:#ffffff;
+
+    text-align:center;
+
+    padding:25px;
+
+    border-radius:16px;
+
+    border:1px solid rgba(255,255,255,.8);
+
+    box-shadow:
+        0 4px 12px rgba(0,0,0,.06),
+        0 2px 8px rgba(168,85,247,.05);
+
+    transition:.35s ease;
+}
+
+.contact-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+        0 12px 28px rgba(168,85,247,.12),
+        0 12px 28px rgba(34,197,94,.10);
+
+}
+
+.icon-circle{
+
+    width:60px;
+    height:60px;
+
+    margin:auto auto 15px;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:24px;
+
+    /* Softer Purple + Green Gradient */
+    background:linear-gradient(
+        135deg,
+        #b791fc 0%,
+        #beadff 45%,
+        #a7fdd5 100%
+    );
+
+    color:#ffffff;
+
+    box-shadow:
+        0 6px 18px rgba(183,148,246,.25),
+        0 6px 18px rgba(167,243,208,.25);
+
+}
+
+.contact-card h3{
+
+    color:#1f2937;
+
+    margin-bottom:10px;
+
+    font-weight:700;
+
+}
+
+.contact-card a{
+
+    text-decoration:none;
+
+    color:#4b5563;
+
+    font-size:18px;
+
+    transition:.3s ease;
+
+}
+
+.contact-card a:hover{
+
+    color:#8b5cf6;
+
+}
+
+/* ===================================
+   WHY HOME PHYSIOTHERAPY
+=================================== */
+
+.why-home-physio{
+    max-width:1400px;
+    margin:80px auto;
+    padding:60px 40px;
+
+    background:#faf5ff;
+
+    border-radius:30px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+
+    text-align:center;
+}
+
+/* Section Heading */
+
+.section-header{
+    max-width:850px;
+    margin:0 auto 50px;
+}
+
+.section-header h1{
+    font-size:3rem;
+    font-weight:700;
+    color:#7c3aed;
+    margin-bottom:20px;
+    line-height:1.2;
+}
+
+.section-header p{
+    font-size:1.15rem;
+    color:#666;
+    line-height:1.8;
+}
+
+/* Cards Grid */
+
+.benefits-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+/* Card */
+
+.benefit-card{
+    background:#ffffff;
+
+    border-radius:24px;
+
+    padding:30px;
+
+    text-align:left;
+
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+
+    transition:0.3s ease;
+}
+
+.benefit-card:hover{
+    transform:translateY(-8px);
+
+    box-shadow:0 15px 35px rgba(0,0,0,0.12);
+}
+
+/* Image */
+
+.benefit-image{
+    height:280px;
+
+    overflow:hidden;
+
+    border-radius:16px;
+
+    margin-bottom:20px;
+}
+
+.benefit-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+
+    transition:0.4s ease;
+}
+
+.benefit-card:hover img{
+    transform:scale(1.05);
+}
+
+/* Title */
+
+.benefit-card h3{
+    color:#9333ea;
+    font-size:1.4rem;
+    margin-bottom:15px;
+}
+
+/* Text */
+
+.benefit-card p{
+    color:#333;
+    line-height:1.8;
+}
+
+/* =====================================
+   AREAS WE COVER
+===================================== */
+
+.areas-section{
+
+    max-width:1400px;
+
+    margin:80px auto;
+
+    padding:0 25px;
+}
+
+/* Main Layout */
+
+.areas-content{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    gap:50px;
+}
+
+/* Left */
+
+.areas-text{
+
+    flex:0 0 50%;
+}
+
+/* Right */
+
+.areas-map{
+
+    flex:0 0 50%;
+}
+
+/* Heading */
+
+.areas-text h2{
+
+    font-size:3rem;
+
+    color:#84cc16;
+
+    font-weight:700;
+
+    margin-bottom:20px;
+}
+
+/* Paragraph */
+
+.areas-text p{
+
+    max-width:560px;
+
+    font-size:1.1rem;
+
+    line-height:1.7;
+
+    margin-bottom:30px;
+}
+
+/* Areas Grid */
+
+.areas-list{
+
+    list-style:none;
+
+    margin:0;
+
+    padding:0;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:15px;
+}
+
+/* Grid Box */
+
+.areas-list li{
+
+    background:#e9d5ff;
+
+    color:#555;
+
+    font-weight:600;
+
+    text-align:center;
+
+    padding:15px 10px;
+
+    border-radius:12px;
+
+    box-shadow:0 4px 10px rgba(0,0,0,.08);
+
+    transition:.3s ease;
+}
+
+.areas-list li:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 10px 20px rgba(0,0,0,.12);
+}
+
+/* Map */
+
+.areas-map iframe{
+
+    width:100%;
+
+    height:900px;
+
+    border:none;
+
+    border-radius:20px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.12);
+}
+
+/* ===================================
+   SERVICES SECTION
+=================================== */
+
+.services-section{
+
+    padding:80px 20px;
+
+    background:#f9f5ff;
+}
+
+/* Container */
+
+.services-section .container{
+
+    max-width:1450px;
+
+    width:100%;
+
+    margin:0 auto;
+
+    padding:0 20px;
+}
+
+/* Heading */
+
+.section-heading{
+
+    text-align:center;
+
+    margin-bottom:50px;
+}
+
+.section-heading h2{
+
+    font-size:2.5rem;
+
+    font-weight:700;
+
+    color:#6b46c1;
+}
+
+/* ===========================
+   SERVICES GRID
+=========================== */
+
+.services-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+}
+
+/* ===========================
+   CARD
+=========================== */
+
+.service-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+
+    text-decoration:none;
+
+    background:#fff;
+}
+
+/* ===========================
+   IMAGE
+=========================== */
+
+.service-card img{
+
+    width:100%;
+
+    height:300px;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:
+        transform .5s ease,
+        filter .5s ease;
+}
+
+/* ===========================
+   OVERLAY
+=========================== */
+
+.service-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:25px;
+
+    color:#fff;
+
+    opacity:0;
+
+    transition:opacity .5s ease;
+}
+
+.service-overlay h3{
+
+    font-size:1.3rem;
+
+    font-weight:600;
+
+    margin-bottom:15px;
+}
+
+.service-overlay p{
+
+    font-size:.95rem;
+
+    line-height:1.6;
+}
+
+/* ===========================
+   HOVER
+=========================== */
+
+.service-card:hover img{
+
+    transform:scale(1.08);
+
+    filter:blur(3px);
+}
+
+.service-card:hover .service-overlay{
+
+    opacity:1;
+}
+
+/* ===================================
+   DOCTOR BIO SECTION
+=================================== */
+
+.doctor-bio {
+    padding: 80px 20px;
+    background: transparent;
+}
+
+.doctor-bio .container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.bio-content {
+    text-align: center;
+}
+
+/* Heading */
+
+.bio-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #6b46c1;
+    margin-bottom: 30px;
+}
+
+/* Description */
+
+.bio-content p {
+    max-width: 850px;
+    margin: 0 auto 40px;
+    color: #333333;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+/* Features */
+
+.bio-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto 40px;
+    max-width: 700px;
+}
+
+.bio-features li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    background: #ffffff;
+
+    padding: 18px 20px;
+    margin-bottom: 15px;
+
+    border-left: 5px solid #6b46c1;
+
+    border-radius: 12px;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+
+    color: #333333;
+    text-align: left;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.bio-features li:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 15px 35px rgba(107,70,193,0.18);
+}
+
+.bio-features .icon {
+    font-size: 1.3rem;
+    flex-shrink: 0;
+}
+
+/* Button */
+
+.bio-button {
+    display: inline-block;
+
+    padding: 14px 30px;
+
+    background: #6b46c1;
+    color: #ffffff;
+
+    text-decoration: none;
+    font-weight: 600;
+
+    border-radius: 10px;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.bio-button:hover {
+    background: #5b35b4;
+    transform: translateY(-3px);
+}
+
+/* ===================================
+   CLIENT REVIEWS SECTION
+=================================== */
+
+.patient-reviews {
+    padding-top: 20px;
+    padding-bottom: 60px;
+}
+
+.patient-reviews .container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Heading */
+
+.patient-reviews h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #6b46c1;
+    margin-bottom: 50px;
+}
+
+/* Review Grid */
+
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+/* Review Card */
+
+.review-card {
+    background: linear-gradient(
+        180deg,
+        #f1f1f3 0%,
+        #e3d9ff 100%
+    );
+
+    border-radius: 16px;
+
+    padding: 30px;
+
+    min-height: 220px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 20px 45px rgba(107,70,193,0.20);
+}
+
+/* Review Text */
+
+.review-card .quote {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #222222;
+    margin-bottom: 20px;
+}
+
+/* Author */
+
+.review-card .author {
+    text-align: right;
+    font-weight: 700;
+    color: #444444;
+}
+
+/* ===================================
+   FOOTER STARTS HERE
+=================================== */
+
+.site-footer{
+
+    background:linear-gradient(
+        180deg,
+        #9b86cd 0%,
+        #9579d7 100%
+    );
+
+    color:#fff;
+
+    padding:30px 20px 10px;
+
+    margin-top:70px;
+
+    overflow:hidden;
+}
+
+/* Container */
+
+.site-footer .container{
+
+    max-width:1350px;
+
+    margin:auto;
+}
+
+/* ===========================
+        GRID
+=========================== */
+
+.footer-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        1.4fr
+        1fr
+        1.2fr
+        1.25fr;
+
+    gap:15px;
+
+    margin-bottom:10px;
+}
+
+/* ===========================
+        BRAND
+=========================== */
+
+.footer-brand img{
+
+    width:82px;
+
+    height:82px;
+
+    object-fit:cover;
+
+    border-radius:14px;
+
+    background:#fff;
+
+    padding:5px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.18);
+
+    margin-bottom:15px;
+}
+
+.footer-brand h3{
+
+    font-size:1.8rem;
+
+    font-weight:700;
+
+    line-height:1.35;
+
+    margin-bottom:18px;
+}
+
+.footer-brand p{
+
+    margin-bottom:12px;
+
+    color:rgba(255,255,255,.95);
+
+    font-size:1.05rem;
+}
+
+/* ===========================
+        HEADINGS
+=========================== */
+
+.footer-links h4,
+.footer-contact h4{
+
+    font-size:1.35rem;
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+    color:#ffffff;
+}
+
+/* Remove underline */
+
+.footer-links h4::after,
+.footer-contact h4::after{
+
+    display:none;
+}
+
+/* ===========================
+        LINKS
+=========================== */
+
+.footer-links ul{
+
+    list-style:none;
+
+    margin:0;
+
+    padding:0;
+}
+
+.footer-links li{
+
+    margin-bottom:14px;
+}
+
+.footer-links a{
+
+    color:#fff;
+
+    text-decoration:none;
+
+    transition:.3s;
+}
+
+.footer-links a:hover{
+
+    color:#AEC880;
+
+    padding-left:6px;
+}
+
+/* ===========================
+        CONTACT
+=========================== */
+
+.footer-contact p{
+
+    margin-bottom:16px;
+
+    line-height:1.7;
+}
+
+.footer-contact strong{
+
+    color:#ffffff;
+}
+
+.footer-contact a{
+
+    color:#fff;
+
+    text-decoration:none;
+}
+
+.footer-contact a:hover{
+
+    color:#AEC880;
+}
+
+/* ===========================
+        HOURS
+=========================== */
+
+.footer-hours{
+
+    margin-top:18px;
+
+    background:rgba(255,255,255,.10);
+
+    padding:14px;
+
+    border-radius:12px;
+}
+
+.footer-hours strong{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    color:#AEC880;
+}
+
+.footer-hours p{
+
+    margin:4px 0;
+
+    font-size:.96rem;
+}
+
+/* ===========================
+        SOCIAL
+=========================== */
+
+.social-links{
+
+    margin-top:22px;
+}
+
+.social-links a{
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(255,255,255,.15);
+
+    color:#fff;
+
+    font-size:1.2rem;
+
+    text-decoration:none;
+
+    transition:.35s;
+}
+
+.social-links a:hover{
+
+    background:#AEC880;
+
+    color:#fff;
+
+    transform:translateY(-4px);
+}
+
+/* ===========================
+        FOOTER BOTTOM
+=========================== */
+
+.footer-bottom{
+
+    border-top:1px solid rgba(255,255,255,.15);
+
+    padding-top:18px;
+
+    text-align:center;
+}
+
+.footer-bottom p{
+
+    margin:6px 0;
+
+    color:#fff;
+
+    font-size:1rem;
+}
+
+.footer-bottom a{
+
+    color:#AEC880;
+
+    text-decoration:none;
+
+    font-weight:600;
+}
+
+.footer-bottom a:hover{
+
+    color:#ffffff;
+}
+
+/* ====================================
+   MOBILE RESPONSIVE STYLES STARTS HERE
+==================================== */
+
+/* ====================================
+   GLOBAL RESET FOR MOBILE DEVICES
+==================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    overflow-x:hidden;
+}
+
+body{
+    overflow-x:hidden;
+    font-family:'Poppins',sans-serif;
+}
+
+img,
+video,
+iframe{
+    max-width:100%;
+    display:block;
+}
+
+/* ====================================
+   MOBILE HEADER
+==================================== */
+
+@media (max-width:768px){
+
+    .top-bar .container{
+        justify-content:center;
+        flex-direction:column;
+        align-items:center;
+        gap:6px;
+        text-align:center;
+        padding:8px 15px;
+    }
+
+    .top-bar a{
+        font-size:13px;
+    }
+
+    .nav-wrapper{
+        padding:12px 15px;
+    }
+
+    .logo{
+        max-width:80%;
+    }
+
+    .logo img{
+        height:42px;
+    }
+
+    .logo span{
+        font-size:0.95rem;
+        line-height:1.3;
+    }
+
+    .desktop-menu{
+        display:none;
+    }
+
+    .mobile-menu-btn{
+        display:block;
+        background:none;
+        border:none;
+        font-size:1.7rem;
+        color:#7e22ce;
+        cursor:pointer;
+    }
+
+    .mobile-menu{
+        display:none;
+        flex-direction:column;
+        background:#ffffff;
+        border-top:1px solid #e5e5e5;
+    }
+
+    .mobile-menu.active{
+        display:flex;
+    }
+
+    .mobile-menu a{
+        padding:15px;
+        text-decoration:none;
+        color:#333;
+        border-bottom:1px solid #f0f0f0;
+        text-align:center;
+        font-weight:500;
+    }
+
+    .mobile-menu a:hover{
+        background:#f9f5ff;
+        color:#7e22ce;
+    }
+
+}
+
+/* Desktop defaults */
+
+.mobile-menu{
+    display:none;
+}
+
+.mobile-menu-btn{
+    display:none;
+}
+
+/* Mobile */
+
+@media (max-width:768px){
+
+    .desktop-menu{
+        display:none;
+    }
+
+    .mobile-menu-btn{
+        display:block;
+    }
+
+    .mobile-menu.active{
+        display:flex;
+        flex-direction:column;
+    }
+
+}
+
+/* ====================================
+   HERO + CONTACT CARDS MOBILE
+==================================== */
+
+@media (max-width:768px){
+
+    /* Hero */
+
+    .hero{
+        height:75vh;
+        min-height:550px;
+    }
+
+    .hero video{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+    }
+
+    /* Contact Cards */
+
+    .contact-cards{
+        margin-top:-40px;
+        padding:0 15px;
+    }
+
+    .cards-wrapper{
+        flex-direction:column;
+        gap:15px;
+        padding:18px;
+        border-radius:18px;
+    }
+
+    .contact-card{
+        width:100%;
+        padding:20px;
+    }
+
+    .icon-circle{
+        width:55px;
+        height:55px;
+        font-size:22px;
+    }
+
+    .contact-card h3{
+        font-size:1.1rem;
+    }
+
+    .contact-card a{
+        font-size:0.95rem;
+        word-break:break-word;
+    }
+
+}
+
+/* ====================================
+   WHY HOME PHYSIOTHERAPY - MOBILE
+==================================== */
+
+@media (max-width:768px){
+
+    .why-home-physio{
+        margin:50px 15px;
+        padding:40px 20px;
+        border-radius:20px;
+    }
+
+    .section-header{
+        margin-bottom:35px;
+    }
+
+    .section-header h1{
+        font-size:1.5rem;
+        line-height:1.3;
+    }
+
+    .section-header p{
+        font-size:0.95rem;
+        line-height:1.7;
+    }
+
+    .benefits-grid{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .benefit-card{
+        padding:20px;
+        border-radius:18px;
+    }
+
+    .benefit-image{
+        height:220px;
+        margin-bottom:15px;
+    }
+
+    .benefit-card h3{
+        font-size:1.2rem;
+        text-align:center;
+    }
+
+    .benefit-card p{
+        font-size:0.95rem;
+        line-height:1.7;
+        text-align:center;
+    }
+
+}
+
+/* ====================================
+   AREAS WE COVER - MOBILE
+==================================== */
+
+@media (max-width:768px){
+
+    .areas-section{
+        margin:50px auto;
+        padding:0 15px;
+    }
+
+    .areas-content{
+        flex-direction:column;
+        gap:30px;
+    }
+
+    .areas-text,
+    .areas-map{
+        flex:100%;
+        width:100%;
+    }
+
+    .areas-text h2{
+        font-size:2rem;
+        text-align:center;
+        line-height:1.3;
+    }
+
+    .areas-text p{
+        max-width:100%;
+        font-size:0.95rem;
+        text-align:center;
+        line-height:1.7;
+        margin-bottom:25px;
+    }
+
+    .areas-list{
+        grid-template-columns:repeat(2,1fr);
+        gap:12px;
+    }
+
+    .areas-list li{
+        padding:12px 8px;
+        font-size:0.9rem;
+    }
+
+    .areas-map iframe{
+        height:400px;
+        border-radius:15px;
+    }
+
+}
+
+/* ====================================
+   SERVICES SECTION - MOBILE
+==================================== */
+
+@media (max-width:768px){
+
+    .services-section{
+        padding:50px 15px;
+    }
+
+    .services-section .container{
+        padding:0;
+    }
+
+    .section-heading{
+        margin-bottom:35px;
+    }
+
+    .section-heading h2{
+        font-size:2rem;
+        line-height:1.3;
+    }
+
+    .services-grid{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .service-card{
+        border-radius:18px;
+    }
+
+    .service-card img{
+        height:250px;
+    }
+
+    /* Show content on mobile */
+    .service-overlay{
+        opacity:1;
+        background:rgba(0,0,0,.45);
+        padding:20px;
+    }
+
+    .service-overlay h3{
+        font-size:1.15rem;
+        margin-bottom:10px;
+    }
+
+    .service-overlay p{
+        font-size:0.9rem;
+        line-height:1.5;
+    }
+
+    /* Disable hover effects on touch devices */
+    .service-card:hover img{
+        transform:none;
+        filter:none;
+    }
+
+}
+
+/* ====================================
+   DOCTOR BIO - MOBILE
+==================================== */
+
+@media (max-width:768px){
+
+    .doctor-bio{
+        padding:50px 15px;
+    }
+
+    .bio-content h2{
+        font-size:2rem;
+        line-height:1.3;
+        margin-bottom:20px;
+    }
+
+    .bio-content p{
+        font-size:0.95rem;
+        line-height:1.7;
+        margin-bottom:30px;
+        text-align:center;
+    }
+
+    .bio-features{
+        max-width:100%;
+        margin-bottom:30px;
+    }
+
+    .bio-features li{
+        padding:15px;
+        gap:10px;
+        font-size:0.95rem;
+        line-height:1.6;
+        align-items:flex-start;
+    }
+
+    .bio-features .icon{
+        font-size:1.1rem;
+        margin-top:2px;
+    }
+
+    .bio-button{
+        width:100%;
+        max-width:280px;
+        text-align:center;
+        padding:14px 20px;
+        font-size:1rem;
+    }
+
+}
+
+/* ====================================
+   CLIENT REVIEWS - MOBILE
+==================================== */
+
+@media (max-width:768px){
+
+    .patient-reviews{
+        padding:10px 15px 50px;
+    }
+
+    .patient-reviews h2{
+        font-size:2rem;
+        line-height:1.3;
+        margin-bottom:30px;
+    }
+
+    .review-grid{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .review-card{
+        padding:25px 20px;
+        min-height:auto;
+        border-radius:14px;
+    }
+
+    .review-card .quote{
+        font-size:0.95rem;
+        line-height:1.7;
+        margin-bottom:15px;
+    }
+
+    .review-card .author{
+        font-size:0.95rem;
+    }
+
+}
+
+/* ====================================
+   FOOTER - MOBILE
+==================================== */
+
+@media (max-width:768px){
+
+    .site-footer{
+        padding:40px 15px 15px;
+        margin-top:50px;
+        text-align:center;
+    }
+
+    /* Footer Grid */
+
+    .footer-grid{
+        grid-template-columns:1fr;
+        gap:35px;
+        margin-bottom:25px;
+        text-align:center;
+    }
+
+    /* ==========================
+       BRAND SECTION
+    ========================== */
+
+    /* Brand */
+
+.footer-brand{
+    text-align:center;
+}
+
+.footer-brand-top{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:15px;
+    margin-bottom:15px;
+}
+
+.footer-brand-top img{
+    width:65px;
+    height:65px;
+    flex-shrink:0;
+}
+
+.footer-brand-top h3{
+    font-size:1.35rem;
+    line-height:1.3;
+    margin:0;
+    text-align:left;
+}
+
+.footer-brand p{
+    font-size:0.95rem;
+    line-height:1.7;
+}
+
+    /* ==========================
+       HEADINGS
+    ========================== */
+
+    .footer-links,
+    .footer-contact{
+        text-align:center;
+    }
+
+    .footer-links h4,
+    .footer-contact h4{
+        font-size:1.2rem;
+        margin-bottom:15px;
+    }
+
+    /* ==========================
+       LINKS
+    ========================== */
+
+    .footer-links ul{
+        padding:0;
+        margin:0;
+    }
+
+    .footer-links li{
+        margin-bottom:10px;
+    }
+
+    .footer-links a{
+        font-size:0.95rem;
+    }
+
+    /* ==========================
+       CONTACT
+    ========================== */
+
+    .footer-contact p{
+        font-size:0.95rem;
+        line-height:1.7;
+    }
+
+    /* ==========================
+       HOURS
+    ========================== */
+
+    .footer-hours{
+        margin-top:15px;
+        padding:12px;
+    }
+
+    .footer-hours p{
+        font-size:0.9rem;
+    }
+
+    /* ==========================
+       SOCIAL
+    ========================== */
+
+    .social-links{
+        display:flex;
+        justify-content:center;
+        gap:12px;
+        margin-top:18px;
+    }
+
+    .social-links a{
+        width:42px;
+        height:42px;
+        font-size:1.1rem;
+    }
+
+    /* ==========================
+       FOOTER BOTTOM
+    ========================== */
+
+    .footer-bottom{
+        padding-top:15px;
+    }
+
+    .footer-bottom p{
+        font-size:0.9rem;
+        line-height:1.6;
+        margin:8px 0;
+    }
+    
+}
